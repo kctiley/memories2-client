@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <title>HTTP Service</title>
+  <base href="/">
+  <meta charset="UTF-8">
+  <link href="./css/app.css" rel="stylesheet" media="screen">
+</head>
+  <body>
+    
+      <div ng-controller="myController" ng-model="initialText">
+        <h1>Say something</h1>
+        <br>
+        <input type="text" ng-model="greeting"></p>
+        <p>{{ greeting }}</p>
+      <!-- add content here -->
+      </div>
+   
+    <div ng-view></div>
+    
+
+    <!-- scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+    <script src="./js/app.js" type="text/javascript"></script>
+    <script src="./js/controllers.js" type="text/javascript"></script>
+    <script src="./js/directives.js" type="text/javascript"></script>
+    <script src="./js/filters.js" type="text/javascript"></script>
+    <script src="./js/services.js" type="text/javascript"></script>
+  </body>
+</html>
