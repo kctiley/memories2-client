@@ -18,34 +18,52 @@
   <script type="text/javascript" src="js/controllers.js"></script>
 </head>
   <body>
-      <div ng-controller="HomeController" >
-        <form name="newMemoryForm" ng-submit="submit()" novalidate>
-          <h1>When I was a kid...</h1>
-          <p>
-            <input type="text" ng-model="old_days" style='width: 300px'>
-          </p>
-          <p>but now...</p>
-          <p>
-            <input type="text" ng-model="these_days"style='width: 300px'>
-          </p>
-          <p>
-            <p>I was born in </p> 
-            <input type="text" ng-model="year" style='width: 80px'> 
-          </p>
-          <input type='submit' id='submit' style='color: white; background: blue'> Submit memory</input>
-        </form>
-
-     
-        <p ng-repeat='memory in memories'>
-          When I was a kid.... {{memory.old_days}} but now ..{{memory.these_days}}.<br> 
-          Year:  {{memory.year}}<br>
-
-        </p>
-            
-   
+    <div class='container' ng-controller="HomeController">
+      <div class='row'>
+        <div class="col-md-12">
+          <form id="newMemoryForm" name="newMemoryForm" ng-submit="submit()" style='width:100%' novalidate >
+            <div id='inputTitle' style='text-align: left'>
+              <h1>When I was a kid...</h1>
+            </div>
+            <p>
+              <input type="text" ng-model="old_days" style='width: 100%; height: 50px'>
+            </p>
+            <div id='inputTitle' style='text-align: left'>
+              <h2>but NOW...</h2>
+            </div>
+            <p>
+              <input type="text" ng-model="these_days"style='width: 100%; height: 50px'>
+            </p>
+            <p>
+              <p>I was born in
+                <input type="text" ng-model="year" style='width: 80px'>
+              </p> 
+            </p>
+            <button type='submit' id='submit' style='color: white; background: blue'> Submit memory</button>
+          </form>
+        </div>
       </div>
-   
-    <div ng-view></div>
+      <!-- end of form row -->
+      <div class="row">
+        <div class="col-md-7" >
+          <div ng-repeat='memory in memories'>
+            <p>
+              When I was a kid.... {{memory.old_days}} but now ..{{memory.these_days}}.
+            </p>
+            <ul>
+              <li>Year: {{memory.year}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-4">
+          <p>Lorem ipsum dolor sit amet, nunc dictum at.</p>
+        </div>
+      </div>
+          <!-- end of outputDiv -->
+    </div>
+    <!-- <div ng-view></div> -->
     
 
   </body>
