@@ -8,39 +8,40 @@
   <link href="./css/app.css" rel="stylesheet" media="screen">
 
     <!-- scripts -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
-    <script src="./js/app.js" type="text/javascript"></script>
-    <script src="./js/controllers.js" type="text/javascript"></script>
-    <script src="./js/directives.js" type="text/javascript"></script>
-    <script src="./js/filters.js" type="text/javascript"></script>
-    <script src="./js/services.js" type="text/javascript"></script>  
+  <link rel="stylesheet" href="http://bootswatch.com/journal/bootstrap.min.css">
+  <link rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css'>
+  <link rel="stylesheet" href='css/app.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/controllers.js"></script>
 </head>
   <body>
       <div ng-controller="HomeController" >
         <form name="newMemoryForm" ng-submit="submit()" novalidate>
           <h1>When I was a kid...</h1>
           <p>
-            <input type="text" ng-model="old_days">
+            <input type="text" ng-model="old_days" style='width: 300px'>
           </p>
           <p>but now...</p>
           <p>
-            <input type="text" ng-model="these_days">
+            <input type="text" ng-model="these_days"style='width: 300px'>
           </p>
           <p>
             <p>I was born in </p> 
-            <input type="text" ng-model="year"> 
+            <input type="text" ng-model="year" style='width: 80px'> 
           </p>
-          <input type='submit' id='submit'>Submit memory</input>
+          <input type='submit' id='submit' style='color: white; background: blue'> Submit memory</input>
         </form>
 
-        <ul>
-          <li ng-repeat='memory in memories'>
-            {{memory.year}}<br>
-            {{memory.old_days}}<br>
-            {{memory.these_days}}<br>
-          </li>
-        </ul>     
+     
+        <p ng-repeat='memory in memories'>
+          When I was a kid.... {{memory.old_days}} but now ..{{memory.these_days}}.<br> 
+          Year:  {{memory.year}}<br>
+
+        </p>
+            
    
       </div>
    

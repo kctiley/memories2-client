@@ -1,8 +1,3 @@
-// app.controller('HomeController', function($scope, $http) {
-//   $http.get("http://g12-klint-tiley.cfapps.io/api/v1/memories").then(function(result){
-//     $scope.memories = result.data;
-//   });
-// }); 
 
 app.controller('HomeController', [ '$scope', '$http', function($scope, $http ) {
   $scope.memories = [];
@@ -36,6 +31,9 @@ app.controller('HomeController', [ '$scope', '$http', function($scope, $http ) {
           console.log('Error in post')
     });
     $scope.memoryObj = {};
+    // $scope.old_days ='';
+    // $scope.these_days = '';
+    // $scope.year = '';
   };
 
 }])
