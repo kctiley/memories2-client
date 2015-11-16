@@ -58,7 +58,11 @@
         <div class="col-md-1">
         </div>
         <div class="col-md-4">
-          <p>Lorem ipsum dolor sit amet, nunc dictum at.</p>
+          <div ng-repeat='year in uniqueYears'>
+            <ul>
+              <li><a href="/{{year.year}}">Year: {{year.year}}</a></li>
+            </ul>
+          </div>
         </div>
       </div>
           <!-- end of outputDiv -->

@@ -1,12 +1,14 @@
 
 app.controller('HomeController', [ '$scope', '$http', function($scope, $http ) {
   $scope.memories = [];
+  // GET all  memories
   $http.get("http://g12-klint-tiley.cfapps.io/api/v1/memories").then(function(response){
     for (var i in response.data){
       $scope.memories.push(response.data[i]);
     }
   });
 
+  // POST new memory
   $scope.submit = function(){
     var memoryObj = 
       {
@@ -35,5 +37,27 @@ app.controller('HomeController', [ '$scope', '$http', function($scope, $http ) {
     // $scope.these_days = '';
     // $scope.year = '';
   };
+
+  // GET unique years list
+  $scope.uniqueYears = []; 
+  $http.get("http://g12-klint-tiley.cfapps.io/api/v1/memories/years").then(function(response){
+    console.log(response);
+    for (var i in response.data){
+      $scope.uniqueYears.push(response.data[i]);
+    }
+  });
+
+  //GET specific year
+ $scope.uniqueYears = []; 
+  $http.get("http://g12-klint-tiley.cfapps.io/api/v1/memories/years").then(function(response){
+    console.log(response);
+    for (var i in response.data){
+      $scope.uniqueYears.push(response.data[i]);
+    }
+  });
+
+
+
+
 
 }])
