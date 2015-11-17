@@ -6,7 +6,7 @@ app.config(function($routeProvider,$locationProvider){
       templateUrl: 'partials/home.html',
       controller: 'HomeController'
     })
-    .when('/:year', {
+    .when('/memories/:year', {
       templateUrl: 'partials/year.html',
       controller: 'YearController'
     })

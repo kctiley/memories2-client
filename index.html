@@ -18,56 +18,8 @@
   <script type="text/javascript" src="js/controllers.js"></script>
 </head>
   <body>
-    <div class='container' ng-controller="HomeController">
-      <div class='row'>
-        <div class="col-md-12">
-          <form id="newMemoryForm" name="newMemoryForm" ng-submit="submit()" style='width:100%' novalidate >
-            <div id='inputTitle' style='text-align: left'>
-              <h1>When I was a kid...</h1>
-            </div>
-            <p>
-              <input type="text" ng-model="old_days" style='width: 100%; height: 50px'>
-            </p>
-            <div id='inputTitle' style='text-align: left'>
-              <h2>but NOW...</h2>
-            </div>
-            <p>
-              <input type="text" ng-model="these_days"style='width: 100%; height: 50px'>
-            </p>
-            <p>
-              <p>I was born in
-                <input type="text" ng-model="year" style='width: 80px'>
-              </p> 
-            </p>
-            <button type='submit' id='submit' style='color: white; background: blue'> Submit memory</button>
-          </form>
-        </div>
-      </div>
-      <!-- end of form row -->
-      <div class="row">
-        <div class="col-md-7" >
-          <div ng-repeat='memory in memories'>
-            <p>
-              When I was a kid.... {{memory.old_days}} but now ..{{memory.these_days}}.
-            </p>
-            <ul>
-              <li>Year: {{memory.year}}</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-4">
-          <div ng-repeat='year in uniqueYears'>
-            <ul>
-              <li><a href="/{{year.year}}">Year: {{year.year}}</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-          <!-- end of outputDiv -->
-    </div>
-    <!-- <div ng-view></div> -->
+
+    <div ng-view></div>
     
 
   </body>
